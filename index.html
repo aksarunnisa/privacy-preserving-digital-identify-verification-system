@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Privacy-Preserving Digital Identity Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        .container {
+            background: white;
+            width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        input, button {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Digital Identity Verification System</h1>
+
+    <!-- Registration Form -->
+    <div class="container">
+        <h2>Register</h2>
+        <form>
+            <input type="text" placeholder="Full Name" required><br>
+            <input type="email" placeholder="Email" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <!-- Login Form -->
+    <div class="container">
+        <h2>Login</h2>
+        <form>
+            <input type="email" placeholder="Email" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- ID Upload -->
+    <div class="container">
+        <h2>Upload ID Proof</h2>
+        <form>
+            <input type="file" required><br>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+
+    <!-- OTP Verification -->
+    <div class="container">
+        <h2>OTP Verification</h2>
+        <form>
+            <input type="text" placeholder="Enter OTP" required><br>
+            <button type="submit">Verify</button>
+        </form>
+    </div>
+
+</body>
+</html>
