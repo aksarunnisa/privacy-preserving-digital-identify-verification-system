@@ -1,84 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Privacy-Preserving Digital Identity Verification</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            text-align: center;
-        }
-
-        .container {
-            background: white;
-            width: 400px;
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px gray;
-        }
-
-        input, button {
-            width: 90%;
-            padding: 10px;
-            margin: 8px 0;
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <title>Identity Verification</title>
 </head>
-<body>
+<body style="text-align:center; font-family:Arial;">
 
-    <h1>Digital Identity Verification System</h1>
+<h1>Privacy Preserving Identity Verification</h1>
 
-    <!-- Registration Form -->
-    <div class="container">
-        <h2>Register</h2>
-        <form>
-            <input type="text" placeholder="Full Name" required><br>
-            <input type="email" placeholder="Email" required><br>
-            <input type="password" placeholder="Password" required><br>
-            <button type="submit">Register</button>
-        </form>
-    </div>
+<p>Enter your ID:</p>
+<input type="text" id="userId" placeholder="Enter ID">
 
-    <!-- Login Form -->
-    <div class="container">
-        <h2>Login</h2>
-        <form>
-            <input type="email" placeholder="Email" required><br>
-            <input type="password" placeholder="Password" required><br>
-            <button type="submit">Login</button>
-        </form>
-    </div>
+<br><br>
 
-    <!-- ID Upload -->
-    <div class="container">
-        <h2>Upload ID Proof</h2>
-        <form>
-            <input type="file" required><br>
-            <button type="submit">Upload</button>
-        </form>
-    </div>
+<button onclick="verifyUser()">Verify</button>
 
-    <!-- OTP Verification -->
-    <div class="container">
-        <h2>OTP Verification</h2>
-        <form>
-            <input type="text" placeholder="Enter OTP" required><br>
-            <button type="submit">Verify</button>
-        </form>
-    </div>
+<h2 id="result"></h2>
+
+<script>
+function verifyUser() {
+    let id = document.getElementById("userId").value;
+
+    if(id === "1234") {
+        document.getElementById("result").innerText = "✅ Verified";
+    } else {
+        document.getElementById("result").innerText = "❌ Not Verified";
+    }
+}
+</script>
 
 </body>
 </html>
